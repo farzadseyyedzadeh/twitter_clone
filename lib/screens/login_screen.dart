@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -23,9 +24,14 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const FaIcon(
+              FontAwesomeIcons.twitter,
+              size: 75,
+              color: Colors.blue,
+            ),
             Container(
-              margin: EdgeInsets.all(15),
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.grey.shade300),
@@ -45,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.all(15),
+              margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
               padding: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                   color: Colors.grey.shade300,
@@ -63,6 +69,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelText: 'Password', border: InputBorder.none),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Container(
               width: 250,
               decoration: BoxDecoration(
@@ -75,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                 },
                 child: const Text(
-                  'Submit',
+                  'Login',
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
